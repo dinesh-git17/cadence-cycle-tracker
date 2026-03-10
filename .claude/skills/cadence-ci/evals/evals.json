@@ -1,0 +1,45 @@
+{
+  "skill_name": "cadence-ci",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Someone on my team opened a PR that changes the GitHub Actions workflow to skip the UI test job and have testflight depend directly on unit-tests. Is this OK?",
+      "expected_output": "Reject the change as a gate-removal violation. Explain that the required pipeline order is lint → build → unit-tests → ui-tests → testflight. The testflight job must have needs: [ui-tests], not needs: [unit-tests]. Skipping UI tests before TestFlight promotion is a release-governance violation that requires explicit review and cannot be accepted as an incidental workflow edit.",
+      "files": [],
+      "expectations": [
+        "Explicitly rejects the PR change",
+        "States the required five-stage ordering",
+        "Identifies this as a gate-removal violation, not a minor refactor",
+        "States that testflight must depend on ui-tests, not unit-tests",
+        "References the gate-removal prevention rules"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What secrets do I need to set up in GitHub before the first TestFlight build of Cadence can run?",
+      "expected_output": "Lists all 6 required secrets: APP_STORE_CONNECT_API_KEY_ID, APP_STORE_CONNECT_API_ISSUER_ID, APP_STORE_CONNECT_API_KEY_CONTENT (base64-encoded .p8 file), MATCH_PASSWORD, MATCH_GIT_URL, MATCH_GIT_TOKEN. Explains where to obtain each and notes that APP_STORE_CONNECT_API_KEY_CONTENT can only be downloaded once at key creation time.",
+      "files": [],
+      "expectations": [
+        "Lists all 6 secrets by exact name",
+        "States that APP_STORE_CONNECT_API_KEY_CONTENT must be base64-encoded",
+        "Warns that the .p8 key can only be downloaded once",
+        "States secrets are set in repository Settings → Secrets and Variables → Actions",
+        "States that secrets should be exposed only to the testflight job"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write me the Fastlane beta lane for Cadence.",
+      "expected_output": "Produces the correct beta lane: setup_ci first, then app_store_connect_api_key with ENV vars, then match with readonly: true and app_identifier com.cadence.tracker, then increment_build_number, then build_app with scheme Cadence and configuration Release, then upload_to_testflight with groups Internal Testers and skip_waiting_for_build_processing: true.",
+      "files": [],
+      "expectations": [
+        "setup_ci is the first action in the lane",
+        "match is called with readonly: true",
+        "app_identifier is com.cadence.tracker",
+        "build_app uses scheme Cadence and configuration Release",
+        "upload_to_testflight restricts to Internal Testers group",
+        "All ASC API key parameters reference ENV variables, not hardcoded values"
+      ]
+    }
+  ]
+}

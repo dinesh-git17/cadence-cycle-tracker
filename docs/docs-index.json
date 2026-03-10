@@ -1,0 +1,1021 @@
+{
+  "site": {
+    "title": "Cadence Documentation",
+    "tagline": "A curated, premium reading layer for the Cadence project.",
+    "summary": "Browse the Cadence design docs, build phases, and research notes from a single static shell built for GitHub Pages.",
+    "repoName": "cadence-cycle-tracker",
+    "repoLabel": "Repository",
+    "highlights": [
+      {
+        "label": "Start Here",
+        "description": "Immediate access to the three source documents that frame the project."
+      },
+      {
+        "label": "Build Phases",
+        "description": "A manifest-driven phase library that scales as new PH folders arrive."
+      },
+      {
+        "label": "Research",
+        "description": "Supporting implementation notes for design, build, CI, navigation, sync, and accessibility."
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "design-doc",
+      "title": "Design Doc",
+      "path": "CADENCE_DESIGN_DOCS/Cadence-design-doc.md",
+      "summary": "MVP product requirements for Cadence."
+    },
+    {
+      "id": "design-spec",
+      "title": "Design Spec",
+      "path": "CADENCE_DESIGN_DOCS/Cadence_Design_Spec_v1.1.md",
+      "summary": "Locked visual and interaction specification for the product."
+    },
+    {
+      "id": "phases",
+      "title": "PHASES.md",
+      "path": "PHASES.md",
+      "summary": "Canonical execution map for the full implementation sequence."
+    },
+    {
+      "id": "mvp-spec",
+      "title": "MVP Product Spec",
+      "path": "CADENCE_DESIGN_DOCS/Cadence_MVP_Spec.md",
+      "summary": "Functional specification for the MVP feature set."
+    },
+    {
+      "id": "splash-spec",
+      "title": "Splash Screen Spec",
+      "path": "CADENCE_DESIGN_DOCS/Cadence_SplashScreen_Spec.md",
+      "summary": "Implementation detail for the launch animation sequence."
+    },
+    {
+      "id": "figma-design",
+      "title": "Figma Design System & Screens",
+      "path": "FIGMA_DESIGN/Cadence — Design System & Screens.pdf",
+      "type": "pdf",
+      "summary": "Reference deck for screens and design system source material."
+    },
+    {
+      "id": "ph0-xcodegen-project-scaffold",
+      "title": "XcodeGen Project Scaffold",
+      "path": "PH-0/1-xcodegen-project-scaffold.md"
+    },
+    {
+      "id": "ph0-color-token-asset-catalog",
+      "title": "Color Token Asset Catalog",
+      "path": "PH-0/2-color-token-asset-catalog.md"
+    },
+    {
+      "id": "ph0-ci-workflow-skeleton",
+      "title": "CI Workflow Skeleton",
+      "path": "PH-0/3-ci-workflow-skeleton.md"
+    },
+    {
+      "id": "ph0-code-quality-enforcement",
+      "title": "Code Quality Enforcement",
+      "path": "PH-0/4-code-quality-enforcement.md"
+    },
+    {
+      "id": "ph1-supabase-project-init",
+      "title": "Supabase Project Initialization",
+      "path": "PH-1/1-supabase-project-init.md"
+    },
+    {
+      "id": "ph1-schema-migration",
+      "title": "8-Table Schema Migration",
+      "path": "PH-1/2-schema-migration.md"
+    },
+    {
+      "id": "ph1-rls-policy-set",
+      "title": "RLS Policy Set",
+      "path": "PH-1/3-rls-policy-set.md"
+    },
+    {
+      "id": "ph1-auth-provider-config",
+      "title": "Authentication Provider Configuration",
+      "path": "PH-1/4-auth-provider-config.md"
+    },
+    {
+      "id": "ph1-edge-function-scaffold",
+      "title": "Edge Function Directory Scaffold",
+      "path": "PH-1/5-edge-function-scaffold.md"
+    },
+    {
+      "id": "ph2-splash-screen",
+      "title": "Splash Screen",
+      "path": "PH-2/1-splash-screen.md"
+    },
+    {
+      "id": "ph2-auth-screen-and-session",
+      "title": "Auth Screen and Session Integration",
+      "path": "PH-2/2-auth-screen-and-session.md"
+    },
+    {
+      "id": "ph2-app-coordinator-and-role-selection",
+      "title": "App Coordinator and Role Selection",
+      "path": "PH-2/3-app-coordinator-and-role-selection.md"
+    },
+    {
+      "id": "ph2-tracker-onboarding",
+      "title": "Tracker Onboarding",
+      "path": "PH-2/4-tracker-onboarding.md"
+    },
+    {
+      "id": "ph2-partner-onboarding",
+      "title": "Partner Onboarding",
+      "path": "PH-2/5-partner-onboarding.md"
+    },
+    {
+      "id": "ph3-swiftdata-schema",
+      "title": "SwiftData Schema",
+      "path": "PH-3/1-swiftdata-schema.md"
+    },
+    {
+      "id": "ph3-prediction-engine",
+      "title": "Prediction Engine",
+      "path": "PH-3/2-prediction-engine.md"
+    },
+    {
+      "id": "ph3-prediction-and-model-unit-tests",
+      "title": "Prediction and Model Unit Tests",
+      "path": "PH-3/3-prediction-and-model-unit-tests.md"
+    },
+    {
+      "id": "ph3-sync-coordinator-skeleton",
+      "title": "SyncCoordinator Write Queue Skeleton",
+      "path": "PH-3/4-sync-coordinator-skeleton.md"
+    },
+    {
+      "id": "ph4-tracker-shell",
+      "title": "Tracker Shell",
+      "path": "PH-4/1-tracker-shell.md"
+    },
+    {
+      "id": "ph4-log-sheet",
+      "title": "Log Sheet",
+      "path": "PH-4/2-log-sheet.md"
+    },
+    {
+      "id": "ph4-symptom-chip",
+      "title": "SymptomChip Component",
+      "path": "PH-4/3-symptom-chip.md"
+    },
+    {
+      "id": "ph4-supporting-components",
+      "title": "Supporting Components",
+      "path": "PH-4/4-supporting-components.md"
+    },
+    {
+      "id": "ph4-motion-and-accessibility",
+      "title": "Motion and Accessibility",
+      "path": "PH-4/5-motion-and-accessibility.md"
+    },
+    {
+      "id": "ph5-feed-scaffold-and-skeleton-loading",
+      "title": "Feed Scaffold and Skeleton Loading",
+      "path": "PH-5/1-feed-scaffold-and-skeleton-loading.md"
+    },
+    {
+      "id": "ph5-sharing-status-strip",
+      "title": "Partner Sharing Status Strip",
+      "path": "PH-5/2-sharing-status-strip.md"
+    },
+    {
+      "id": "ph5-cycle-status-card-and-countdown-row",
+      "title": "Cycle Status Card and Countdown Row",
+      "path": "PH-5/3-cycle-status-card-and-countdown-row.md"
+    },
+    {
+      "id": "ph5-today-log-cta-and-insight-card",
+      "title": "Today's Log and Insight Card",
+      "path": "PH-5/4-today-log-cta-and-insight-card.md"
+    },
+    {
+      "id": "ph6-calendar-month-grid-period-states",
+      "title": "Calendar Month Grid and Period States",
+      "path": "PH-6/1-calendar-month-grid-period-states.md"
+    },
+    {
+      "id": "ph6-fertile-window-ovulation-indicator",
+      "title": "Fertile Window and Ovulation Indicator",
+      "path": "PH-6/2-fertile-window-ovulation-indicator.md"
+    },
+    {
+      "id": "ph6-day-tap-detail-sheet",
+      "title": "Day Tap and Detail Read-Sheet",
+      "path": "PH-6/3-day-tap-detail-sheet.md"
+    },
+    {
+      "id": "ph6-historical-entry-edit-path",
+      "title": "Historical Entry Edit via Log Sheet",
+      "path": "PH-6/4-historical-entry-edit-path.md"
+    },
+    {
+      "id": "ph7-write-queue-flush-and-transport-layer",
+      "title": "Write Queue Flush and Transport Layer",
+      "path": "PH-7/1-write-queue-flush-and-transport-layer.md"
+    },
+    {
+      "id": "ph7-conflict-resolution",
+      "title": "Conflict Resolution",
+      "path": "PH-7/2-conflict-resolution.md"
+    },
+    {
+      "id": "ph7-realtime-channel-subscription",
+      "title": "Realtime Channel Subscription",
+      "path": "PH-7/3-realtime-channel-subscription.md"
+    },
+    {
+      "id": "ph7-offline-resilience-and-auth",
+      "title": "Offline Resilience and Auth Continuity",
+      "path": "PH-7/4-offline-resilience-and-auth.md"
+    },
+    {
+      "id": "ph8-invite-code-generation",
+      "title": "Invite Code Generation",
+      "path": "PH-8/1-invite-code-generation.md"
+    },
+    {
+      "id": "ph8-connection-handshake",
+      "title": "Connection Handshake and Confirmation",
+      "path": "PH-8/2-connection-handshake.md"
+    },
+    {
+      "id": "ph8-permission-category-toggles",
+      "title": "Permission Category Toggles",
+      "path": "PH-8/3-permission-category-toggles.md"
+    },
+    {
+      "id": "ph8-pause-and-disconnect",
+      "title": "Pause Sharing and Disconnect",
+      "path": "PH-8/4-pause-and-disconnect.md"
+    },
+    {
+      "id": "ph8-privacy-enforcement-layer",
+      "title": "Privacy Enforcement Layer",
+      "path": "PH-8/5-privacy-enforcement-layer.md"
+    },
+    {
+      "id": "ph9-partner-navigation-shell",
+      "title": "Partner Navigation Shell",
+      "path": "PH-9/1-partner-navigation-shell.md"
+    },
+    {
+      "id": "ph9-partner-bento-grid-components",
+      "title": "Partner Bento Grid Components",
+      "path": "PH-9/2-partner-bento-grid-components.md"
+    },
+    {
+      "id": "ph9-realtime-data-integration",
+      "title": "Realtime Data Integration",
+      "path": "PH-9/3-realtime-data-integration.md"
+    },
+    {
+      "id": "ph9-paused-sharing-state",
+      "title": "Paused Sharing State",
+      "path": "PH-9/4-paused-sharing-state.md"
+    },
+    {
+      "id": "ph10-notification-permission-device-token",
+      "title": "Notification Permission and Device Token",
+      "path": "PH-10/1-notification-permission-device-token.md"
+    },
+    {
+      "id": "ph10-edge-function-apns-dispatch",
+      "title": "Edge Function APNS Dispatch",
+      "path": "PH-10/2-edge-function-apns-dispatch.md"
+    },
+    {
+      "id": "ph10-tracker-local-reminder-scheduling",
+      "title": "Tracker Local Reminder Scheduling",
+      "path": "PH-10/3-tracker-local-reminder-scheduling.md"
+    },
+    {
+      "id": "ph10-tracker-notification-controls-ui",
+      "title": "Tracker Notification Controls UI",
+      "path": "PH-10/4-tracker-notification-controls-ui.md"
+    },
+    {
+      "id": "ph10-partner-notification-tab-mute-controls",
+      "title": "Partner Notification Tab and Mute Controls",
+      "path": "PH-10/5-partner-notification-tab-mute-controls.md"
+    },
+    {
+      "id": "ph11-reports-viewmodel-metrics-query-layer",
+      "title": "ReportsViewModel and Metrics Query Layer",
+      "path": "PH-11/1-reports-viewmodel-metrics-query-layer.md"
+    },
+    {
+      "id": "ph11-metric-cards-chart-components",
+      "title": "Metric Cards and Chart Components",
+      "path": "PH-11/2-metric-cards-chart-components.md"
+    },
+    {
+      "id": "ph11-reports-screen-assembly-gate-empty-state",
+      "title": "Reports Screen Assembly and Empty State",
+      "path": "PH-11/3-reports-screen-assembly-gate-empty-state.md"
+    },
+    {
+      "id": "ph12-tracker-settings-shell-and-cycle-defaults",
+      "title": "Tracker Settings Shell and Cycle Defaults",
+      "path": "PH-12/1-tracker-settings-shell-and-cycle-defaults.md"
+    },
+    {
+      "id": "ph12-app-lock",
+      "title": "App Lock",
+      "path": "PH-12/2-app-lock.md"
+    },
+    {
+      "id": "ph12-account-management-and-delete-all-data",
+      "title": "Account Management and Delete All Data",
+      "path": "PH-12/3-account-management-and-delete-all-data.md"
+    },
+    {
+      "id": "ph12-partner-settings-tab",
+      "title": "Partner Settings Tab",
+      "path": "PH-12/4-partner-settings-tab.md"
+    },
+    {
+      "id": "ph13-touch-target-audit",
+      "title": "Touch Target Audit",
+      "path": "PH-13/1-touch-target-audit.md"
+    },
+    {
+      "id": "ph13-voiceover-semantic-labels",
+      "title": "VoiceOver Semantic Labels",
+      "path": "PH-13/2-voiceover-semantic-labels.md"
+    },
+    {
+      "id": "ph13-dynamic-type-reduced-motion",
+      "title": "Dynamic Type and Reduced Motion",
+      "path": "PH-13/3-dynamic-type-reduced-motion.md"
+    },
+    {
+      "id": "ph13-contrast-colorblind-audit",
+      "title": "Contrast and Colorblind Audit",
+      "path": "PH-13/4-contrast-colorblind-audit.md"
+    },
+    {
+      "id": "ph14-ci-cd-pipeline",
+      "title": "CI/CD Pipeline Infrastructure",
+      "path": "PH-14/1-ci-cd-pipeline.md"
+    },
+    {
+      "id": "ph14-unit-test-coverage-gate",
+      "title": "Unit Test Coverage Gate",
+      "path": "PH-14/2-unit-test-coverage-gate.md"
+    },
+    {
+      "id": "ph14-ui-test-suite",
+      "title": "UI Test Suite",
+      "path": "PH-14/3-ui-test-suite.md"
+    },
+    {
+      "id": "ph14-asset-and-haptic-finalization",
+      "title": "Asset and Haptic Finalization",
+      "path": "PH-14/4-asset-and-haptic-finalization.md"
+    },
+    {
+      "id": "ph14-device-validation",
+      "title": "Device Validation",
+      "path": "PH-14/5-device-validation.md"
+    },
+    {
+      "id": "ph14-testflight-distribution",
+      "title": "TestFlight Distribution",
+      "path": "PH-14/6-testflight-distribution.md"
+    },
+    {
+      "id": "research-cadence-accessibility",
+      "title": "Cadence Accessibility Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-accessibility-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-build",
+      "title": "Cadence Build Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-build-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-ci",
+      "title": "Cadence CI Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-ci-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-data-layer",
+      "title": "Cadence Data Layer Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-data-layer-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-design-system",
+      "title": "Cadence Design System Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-design-system-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-figma",
+      "title": "Cadence Figma Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-figma-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-git",
+      "title": "Cadence Git Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-git-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-motion",
+      "title": "Cadence Motion Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-motion-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-navigation",
+      "title": "Cadence Navigation Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-navigation-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-privacy-architecture",
+      "title": "Cadence Privacy Architecture Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-privacy-architecture-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-supabase",
+      "title": "Cadence Supabase Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-supabase-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-sync",
+      "title": "Cadence Sync Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-sync-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-testing",
+      "title": "Cadence Testing Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-testing-skill-notes.md"
+    },
+    {
+      "id": "research-cadence-xcode-project",
+      "title": "Cadence Xcode Project Skill Notes",
+      "path": "SKILL_RESEARCH/cadence-xcode-project-skill-notes.md"
+    },
+    {
+      "id": "research-liquid-glass-ios26",
+      "title": "Liquid Glass iOS 26 Skill Notes",
+      "path": "SKILL_RESEARCH/liquid-glass-ios26-skill-notes.md"
+    },
+    {
+      "id": "research-swiftui-production",
+      "title": "SwiftUI Production Skill Notes",
+      "path": "SKILL_RESEARCH/swiftui-production-skill-notes.md"
+    }
+  ],
+  "featured": [
+    {
+      "docId": "design-doc",
+      "eyebrow": "Product"
+    },
+    {
+      "docId": "design-spec",
+      "eyebrow": "Visual"
+    },
+    {
+      "docId": "phases",
+      "eyebrow": "Execution"
+    }
+  ],
+  "navigation": [
+    {
+      "id": "start-here",
+      "label": "Start Here",
+      "items": [
+        {
+          "type": "home",
+          "id": "nav-home",
+          "label": "Home"
+        },
+        {
+          "type": "doc",
+          "docId": "design-doc"
+        },
+        {
+          "type": "doc",
+          "docId": "design-spec"
+        },
+        {
+          "type": "doc",
+          "docId": "phases"
+        }
+      ]
+    },
+    {
+      "id": "foundation",
+      "label": "Foundation",
+      "items": [
+        {
+          "type": "folder",
+          "id": "foundation-design-docs",
+          "label": "Design Docs",
+          "description": "Core product and design sources.",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "design-doc"
+            },
+            {
+              "type": "doc",
+              "docId": "design-spec"
+            },
+            {
+              "type": "doc",
+              "docId": "mvp-spec"
+            },
+            {
+              "type": "doc",
+              "docId": "splash-spec"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "foundation-figma-design",
+          "label": "Figma Design",
+          "description": "Screens and system reference deck.",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "figma-design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build-phases",
+      "label": "Build Phases",
+      "items": [
+        {
+          "type": "folder",
+          "id": "phase-0",
+          "label": "Phase 0",
+          "code": "PH-0",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph0-xcodegen-project-scaffold"
+            },
+            {
+              "type": "doc",
+              "docId": "ph0-color-token-asset-catalog"
+            },
+            {
+              "type": "doc",
+              "docId": "ph0-ci-workflow-skeleton"
+            },
+            {
+              "type": "doc",
+              "docId": "ph0-code-quality-enforcement"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-1",
+          "label": "Phase 1",
+          "code": "PH-1",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph1-supabase-project-init"
+            },
+            {
+              "type": "doc",
+              "docId": "ph1-schema-migration"
+            },
+            {
+              "type": "doc",
+              "docId": "ph1-rls-policy-set"
+            },
+            {
+              "type": "doc",
+              "docId": "ph1-auth-provider-config"
+            },
+            {
+              "type": "doc",
+              "docId": "ph1-edge-function-scaffold"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-2",
+          "label": "Phase 2",
+          "code": "PH-2",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph2-splash-screen"
+            },
+            {
+              "type": "doc",
+              "docId": "ph2-auth-screen-and-session"
+            },
+            {
+              "type": "doc",
+              "docId": "ph2-app-coordinator-and-role-selection"
+            },
+            {
+              "type": "doc",
+              "docId": "ph2-tracker-onboarding"
+            },
+            {
+              "type": "doc",
+              "docId": "ph2-partner-onboarding"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-3",
+          "label": "Phase 3",
+          "code": "PH-3",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph3-swiftdata-schema"
+            },
+            {
+              "type": "doc",
+              "docId": "ph3-prediction-engine"
+            },
+            {
+              "type": "doc",
+              "docId": "ph3-prediction-and-model-unit-tests"
+            },
+            {
+              "type": "doc",
+              "docId": "ph3-sync-coordinator-skeleton"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-4",
+          "label": "Phase 4",
+          "code": "PH-4",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph4-tracker-shell"
+            },
+            {
+              "type": "doc",
+              "docId": "ph4-log-sheet"
+            },
+            {
+              "type": "doc",
+              "docId": "ph4-symptom-chip"
+            },
+            {
+              "type": "doc",
+              "docId": "ph4-supporting-components"
+            },
+            {
+              "type": "doc",
+              "docId": "ph4-motion-and-accessibility"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-5",
+          "label": "Phase 5",
+          "code": "PH-5",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph5-feed-scaffold-and-skeleton-loading"
+            },
+            {
+              "type": "doc",
+              "docId": "ph5-sharing-status-strip"
+            },
+            {
+              "type": "doc",
+              "docId": "ph5-cycle-status-card-and-countdown-row"
+            },
+            {
+              "type": "doc",
+              "docId": "ph5-today-log-cta-and-insight-card"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-6",
+          "label": "Phase 6",
+          "code": "PH-6",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph6-calendar-month-grid-period-states"
+            },
+            {
+              "type": "doc",
+              "docId": "ph6-fertile-window-ovulation-indicator"
+            },
+            {
+              "type": "doc",
+              "docId": "ph6-day-tap-detail-sheet"
+            },
+            {
+              "type": "doc",
+              "docId": "ph6-historical-entry-edit-path"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-7",
+          "label": "Phase 7",
+          "code": "PH-7",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph7-write-queue-flush-and-transport-layer"
+            },
+            {
+              "type": "doc",
+              "docId": "ph7-conflict-resolution"
+            },
+            {
+              "type": "doc",
+              "docId": "ph7-realtime-channel-subscription"
+            },
+            {
+              "type": "doc",
+              "docId": "ph7-offline-resilience-and-auth"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-8",
+          "label": "Phase 8",
+          "code": "PH-8",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph8-invite-code-generation"
+            },
+            {
+              "type": "doc",
+              "docId": "ph8-connection-handshake"
+            },
+            {
+              "type": "doc",
+              "docId": "ph8-permission-category-toggles"
+            },
+            {
+              "type": "doc",
+              "docId": "ph8-pause-and-disconnect"
+            },
+            {
+              "type": "doc",
+              "docId": "ph8-privacy-enforcement-layer"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-9",
+          "label": "Phase 9",
+          "code": "PH-9",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph9-partner-navigation-shell"
+            },
+            {
+              "type": "doc",
+              "docId": "ph9-partner-bento-grid-components"
+            },
+            {
+              "type": "doc",
+              "docId": "ph9-realtime-data-integration"
+            },
+            {
+              "type": "doc",
+              "docId": "ph9-paused-sharing-state"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-10",
+          "label": "Phase 10",
+          "code": "PH-10",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph10-notification-permission-device-token"
+            },
+            {
+              "type": "doc",
+              "docId": "ph10-edge-function-apns-dispatch"
+            },
+            {
+              "type": "doc",
+              "docId": "ph10-tracker-local-reminder-scheduling"
+            },
+            {
+              "type": "doc",
+              "docId": "ph10-tracker-notification-controls-ui"
+            },
+            {
+              "type": "doc",
+              "docId": "ph10-partner-notification-tab-mute-controls"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-11",
+          "label": "Phase 11",
+          "code": "PH-11",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph11-reports-viewmodel-metrics-query-layer"
+            },
+            {
+              "type": "doc",
+              "docId": "ph11-metric-cards-chart-components"
+            },
+            {
+              "type": "doc",
+              "docId": "ph11-reports-screen-assembly-gate-empty-state"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-12",
+          "label": "Phase 12",
+          "code": "PH-12",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph12-tracker-settings-shell-and-cycle-defaults"
+            },
+            {
+              "type": "doc",
+              "docId": "ph12-app-lock"
+            },
+            {
+              "type": "doc",
+              "docId": "ph12-account-management-and-delete-all-data"
+            },
+            {
+              "type": "doc",
+              "docId": "ph12-partner-settings-tab"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-13",
+          "label": "Phase 13",
+          "code": "PH-13",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph13-touch-target-audit"
+            },
+            {
+              "type": "doc",
+              "docId": "ph13-voiceover-semantic-labels"
+            },
+            {
+              "type": "doc",
+              "docId": "ph13-dynamic-type-reduced-motion"
+            },
+            {
+              "type": "doc",
+              "docId": "ph13-contrast-colorblind-audit"
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "id": "phase-14",
+          "label": "Phase 14",
+          "code": "PH-14",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "ph14-ci-cd-pipeline"
+            },
+            {
+              "type": "doc",
+              "docId": "ph14-unit-test-coverage-gate"
+            },
+            {
+              "type": "doc",
+              "docId": "ph14-ui-test-suite"
+            },
+            {
+              "type": "doc",
+              "docId": "ph14-asset-and-haptic-finalization"
+            },
+            {
+              "type": "doc",
+              "docId": "ph14-device-validation"
+            },
+            {
+              "type": "doc",
+              "docId": "ph14-testflight-distribution"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "items": [
+        {
+          "type": "folder",
+          "id": "skill-research",
+          "label": "Skill Research",
+          "description": "Execution notes for implementation domains.",
+          "items": [
+            {
+              "type": "doc",
+              "docId": "research-cadence-accessibility"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-build"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-ci"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-data-layer"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-design-system"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-figma"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-git"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-motion"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-navigation"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-privacy-architecture"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-supabase"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-sync"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-testing"
+            },
+            {
+              "type": "doc",
+              "docId": "research-cadence-xcode-project"
+            },
+            {
+              "type": "doc",
+              "docId": "research-liquid-glass-ios26"
+            },
+            {
+              "type": "doc",
+              "docId": "research-swiftui-production"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

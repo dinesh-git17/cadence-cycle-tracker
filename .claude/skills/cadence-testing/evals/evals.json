@@ -1,0 +1,46 @@
+{
+  "skill_name": "cadence-testing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm implementing PredictionEngine for Cadence. What unit tests do I need to write? Give me the complete test list with the exact edge cases the skill requires.",
+      "expected_output": "A complete list of all 10 required PredictionEngine edge cases from §3, including the zero-cycles default, 0-1/2-3/4+ confidence thresholds, SD=2.0 boundary, open period exclusion, max-6-cycles cap, and algorithm spot-check. Must mention fixed anchor dates instead of Date().",
+      "files": [],
+      "expectations": [
+        "Lists all 10 required edge cases from §3",
+        "Mentions SD=2.0 boundary case as explicitly required",
+        "Warns against using Date() — requires fixed anchor date",
+        "Specifies confidence scoring thresholds correctly (0-1=low, 2-3=medium, 4+SD≤2=high, 4+SD>2=medium)",
+        "Mentions open period (endDate nil) exclusion test"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're about to ship the first TestFlight build of Cadence. What's our coverage gate? Which layers need 80%+ and how do we verify it?",
+      "expected_output": "States the 80%+ gate on data and domain layers as a release gate (not nice-to-have). Lists PredictionEngine at 90%+, privacy filter at 90%+, SwiftData models at 80%+, ViewModels at 75%+. Explains how to verify with xccov and stresses per-file inspection, not just aggregate.",
+      "files": [],
+      "expectations": [
+        "Explicitly calls out 80%+ as a release gate, not a metric",
+        "States PredictionEngine target as 90%+",
+        "States privacy filter target as 90%+",
+        "Warns that 80% aggregate masking 0% on PredictionEngine is a gate failure",
+        "Provides xccov command or equivalent verification method"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Writing UI tests for Cadence's Log Sheet. How should I set up the test class, isolate from live data, find elements, and what exact flows must I cover?",
+      "expected_output": "Specifies --in-memory-store and --uitesting launch arguments, continueAfterFailure = false, accessibilityIdentifier-based element lookup (not display text), and covers all required flows: sheet presents from center tab, period started, chip toggle, notes input, isPrivate toggle, save dismisses.",
+      "files": [],
+      "expectations": [
+        "Requires --in-memory-store launch argument",
+        "Requires continueAfterFailure = false",
+        "Requires accessibilityIdentifier for element lookup, not display text",
+        "Lists the sheet-from-center-tab test",
+        "Lists the isPrivate toggle test",
+        "Lists the save-dismisses test",
+        "States that no live Supabase connection is permitted"
+      ]
+    }
+  ]
+}

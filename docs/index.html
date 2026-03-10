@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11100f" />
+    <meta
+      name="description"
+      content="Cadence Documentation is a premium GitHub Pages reader for the project's design docs, build phases, and research notes."
+    />
+    <title>Cadence Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div
+      class="app-shell"
+      id="app-shell"
+      data-view="home"
+      data-ready="false"
+      data-drawer-open="false"
+    >
+      <header class="topbar">
+        <div class="topbar__left">
+          <button
+            class="menu-button"
+            id="menu-button"
+            type="button"
+            aria-label="Open navigation"
+            aria-controls="docs-sidebar"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <button
+            class="brand-button"
+            id="brand-button"
+            type="button"
+            data-action="go-home"
+          >
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-copy">
+              <span class="brand-kicker">Cadence</span>
+              <span class="brand-title">Documentation</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="topbar__right">
+          <a
+            class="repo-link"
+            id="repo-link"
+            href="#"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <span>Repository</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M7 17L17 7M9 7h8v8"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside
+          class="sidebar"
+          id="docs-sidebar"
+          aria-label="Documentation navigation"
+        >
+          <div class="sidebar__inner">
+            <div class="search-panel">
+              <label class="search-label" for="search-input"
+                >Search documents</label
+              >
+              <div class="search-input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="6.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  ></circle>
+                  <path
+                    d="M16 16L21 21"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                  ></path>
+                </svg>
+                <input
+                  id="search-input"
+                  type="search"
+                  name="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  placeholder="Search by title"
+                />
+              </div>
+            </div>
+
+            <nav
+              class="nav-root"
+              id="nav-root"
+              aria-label="Curated document navigation"
+            >
+              <div class="sidebar-status">
+                <div class="status-pill"></div>
+                <p>Loading navigation...</p>
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <div
+          class="drawer-backdrop"
+          id="drawer-backdrop"
+          aria-hidden="true"
+        ></div>
+
+        <main class="main-stage" id="main-content" tabindex="-1">
+          <section
+            class="landing-panel"
+            id="landing-panel"
+            aria-labelledby="landing-title"
+          >
+            <div class="shell-placeholder">
+              <div
+                class="shell-placeholder__line shell-placeholder__line--wide"
+              ></div>
+              <div
+                class="shell-placeholder__line shell-placeholder__line--mid"
+              ></div>
+              <div class="shell-placeholder__cards">
+                <div class="shell-placeholder__card"></div>
+                <div class="shell-placeholder__card"></div>
+                <div class="shell-placeholder__card"></div>
+              </div>
+            </div>
+          </section>
+
+          <article class="reader-panel" id="reader-panel" aria-live="polite">
+            <header class="reader-header">
+              <h1 class="reader-title" id="reader-title" tabindex="-1">
+                Cadence Documentation
+              </h1>
+            </header>
+            <div class="reader-body" id="reader-body">
+              <div class="reader-state">
+                <div class="reader-state__dot"></div>
+                <p>Select a document to begin reading.</p>
+              </div>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript">
+        <p>
+          Cadence Documentation requires JavaScript to load the curated
+          navigation and markdown reader.
+        </p>
+      </div>
+    </noscript>
+  </body>
+</html>
