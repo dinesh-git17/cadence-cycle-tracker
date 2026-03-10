@@ -1,0 +1,112 @@
+# .pre-commit-config.yaml
+# Cadence Cycle Tracker -- Git Hook Governance
+#
+# Install:  scripts/setup-hooks.sh
+# Update:   pre-commit autoupdate
+
+default_install_hook_types: [pre-commit, commit-msg, pre-push]
+
+repos:
+  # ── Community hooks: file hygiene ──────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '^(docs/|\.claude/|assets/)'
+      - id: end-of-file-fixer
+        exclude: '^(docs/|\.claude/|assets/)'
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=2048']
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  # ── Conventional Commits enforcement ───────────────────────────────────
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args:
+          - feat
+          - fix
+          - chore
+          - refactor
+          - test
+          - docs
+          - exp
+
+  # ── Local hooks: Cadence-specific enforcement ──────────────────────────
+  - repo: local
+    hooks:
+      # Protocol Zero -- AI attribution scan (staged files)
+      - id: protocol-zero
+        name: Protocol Zero
+        entry: scripts/hooks/protocol-zero-staged.sh
+        language: script
+        pass_filenames: false
+        stages: [pre-commit]
+
+      # Typographic Lint -- smart character detection (staged files)
+      - id: typographic-lint
+        name: Typographic Lint
+        entry: scripts/hooks/typographic-lint-staged.sh
+        language: script
+        pass_filenames: false
+        stages: [pre-commit]
+
+      # SwiftLint -- code style enforcement
+      - id: swiftlint
+        name: SwiftLint
+        entry: swiftlint lint --strict --quiet
+        language: system
+        types: [swift]
+        stages: [pre-commit]
+
+      # SwiftFormat -- formatting consistency (lint-only)
+      - id: swiftformat
+        name: SwiftFormat
+        entry: swiftformat --lint --quiet
+        language: system
+        types: [swift]
+        stages: [pre-commit]
+
+      # No Hex Colors in Swift
+      - id: no-hex-in-swift
+        name: No Hex Colors in Swift
+        entry: scripts/hooks/no-hex-in-swift-hook.sh
+        language: script
+        types: [swift]
+        stages: [pre-commit]
+
+      # pbxproj Isolation Guard
+      - id: pbxproj-isolation
+        name: pbxproj Isolation
+        entry: scripts/hooks/pbxproj-isolation-hook.sh
+        language: script
+        pass_filenames: false
+        stages: [pre-commit]
+
+      # Secret Pattern Detection (Cadence-specific)
+      - id: secret-pattern-scan
+        name: Secret Pattern Scan
+        entry: scripts/hooks/secret-pattern-scan.sh
+        language: script
+        exclude: '^scripts/hooks/'
+        stages: [pre-commit]
+
+      # Protocol Zero -- commit message scan
+      - id: protocol-zero-commit-msg
+        name: Protocol Zero (commit msg)
+        entry: scripts/hooks/protocol-zero-commit-msg.sh
+        language: script
+        stages: [commit-msg]
+
+      # Block Push to Main
+      - id: block-push-main
+        name: Block Push to Main
+        entry: scripts/hooks/block-push-main.sh
+        language: script
+        pass_filenames: false
+        stages: [pre-push]

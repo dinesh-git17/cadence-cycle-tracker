@@ -1,0 +1,53 @@
+# --- Xcode / iOS ---
+DerivedData/
+build/
+xcuserdata/
+*.xcworkspace/
+!Cadence.xcodeproj/
+*.moved-aside
+*.hmap
+*.ipa
+
+# --- Swift Package Manager ---
+.swiftpm/
+.build/
+Package.resolved
+
+# --- CocoaPods (if ever used) ---
+Pods/
+
+# --- Secrets and credentials ---
+.env
+.env.*
+*.p8
+*.p12
+*.mobileprovision
+*.provisionprofile
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --- IDE ---
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.xcscmblueprint
+.idea/
+*.swp
+*~
+
+# --- Fastlane ---
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# --- Misc ---
+*.log
