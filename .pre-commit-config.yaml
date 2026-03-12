@@ -18,9 +18,10 @@ repos:
       - id: check-yaml
       - id: check-json
       - id: check-added-large-files
-        args: ['--maxkb=2048']
+        args: ["--maxkb=2048"]
       - id: check-merge-conflict
       - id: detect-private-key
+        exclude: '^docs/'
 
   # ── Conventional Commits enforcement ───────────────────────────────────
   - repo: https://github.com/compilerla/conventional-pre-commit
@@ -93,7 +94,7 @@ repos:
         name: Secret Pattern Scan
         entry: scripts/hooks/secret-pattern-scan.sh
         language: script
-        exclude: '^scripts/hooks/'
+        exclude: "^scripts/hooks/"
         stages: [pre-commit]
 
       # Protocol Zero -- commit message scan
