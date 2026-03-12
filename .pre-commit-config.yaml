@@ -9,7 +9,7 @@ default_install_hook_types: [pre-commit, commit-msg, pre-push]
 repos:
   # ── Community hooks: file hygiene ──────────────────────────────────────
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
         exclude: '^(docs/|\.claude/|assets/)'
@@ -25,7 +25,7 @@ repos:
 
   # ── Conventional Commits enforcement ───────────────────────────────────
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v4.0.0
+    rev: v4.4.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
