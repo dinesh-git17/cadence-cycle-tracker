@@ -1,0 +1,27 @@
+# label-sync.yml -- Sync label definitions from labels.yml to GitHub
+#
+# Runs when labels.yml changes on main, or on manual dispatch.
+# Deletes labels not present in the file.
+
+name: Label Sync
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/labels.yml"]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: EndBug/label-sync@v2
+        with:
+          config-file: .github/labels.yml
+          delete-other-labels: true
+          token: ${{ secrets.GITHUB_TOKEN }}

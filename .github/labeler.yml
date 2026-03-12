@@ -1,0 +1,72 @@
+# labeler.yml -- Path-based PR label rules for actions/labeler v5
+#
+# Each key is a label name from labels.yml.
+# A label is applied when any changed file matches the pattern.
+
+"area: ui":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cadence/Views/**"
+          - "Cadence/Resources/Colors.xcassets/**"
+          - "Cadence/Resources/Images.xcassets/**"
+
+"area: data":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cadence/Models/**"
+          - "Cadence/ViewModels/**"
+
+"area: sync":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cadence/Services/Sync*"
+          - "Cadence/Services/SyncCoordinator*"
+
+"area: supabase":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cadence/Services/Supabase*"
+          - "supabase/**"
+
+"area: navigation":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cadence/Views/Tracker/TrackerShell*"
+          - "Cadence/Views/Partner/PartnerShell*"
+          - "Cadence/Models/*Route*"
+
+"area: privacy":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cadence/Services/Privacy*"
+          - "Cadence/Models/*Privacy*"
+          - "Cadence/Models/*Share*"
+
+"area: ci":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+          - "Gemfile*"
+          - "fastlane/**"
+
+"area: governance":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "CLAUDE.md"
+          - ".claude/**"
+          - "scripts/**"
+          - ".pre-commit-config.yaml"
+          - ".github/labels.yml"
+          - ".github/labeler.yml"
+          - ".github/CODEOWNERS"
+
+"type: docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+
+"type: test":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "CadenceTests/**"
+          - "CadenceUITests/**"
