@@ -1,0 +1,100 @@
+# .github/dependabot.yml -- Cadence Cycle Tracker
+#
+# Dependency update automation. Covers all package ecosystems present
+# or planned in this repository. Dependabot silently skips ecosystems
+# whose manifests do not yet exist, so forward declarations are safe.
+#
+# Commit prefix: chore(deps) -- aligned with Conventional Commits (CLAUDE.md SS7.3).
+# Assignee: dinesh-git17 -- sole contributor and CODEOWNERS default.
+# Label: "type: chore" -- matches labels.yml taxonomy.
+
+version: 2
+
+updates:
+  # -- GitHub Actions workflows (.github/workflows/) --------------------
+  # Phase 13 introduces CI/CD. Low-churn ecosystem; monthly is sufficient.
+  # All action bumps grouped into a single PR to reduce noise.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "dinesh-git17"
+    labels:
+      - "type: chore"
+      - "area: ci"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      actions:
+        patterns:
+          - "*"
+    open-pull-requests-limit: 3
+
+  # -- Swift Package Manager (Package.swift) ----------------------------
+  # Phase 2+ adds SPM dependencies (supabase-swift, etc.).
+  # Weekly cadence catches security patches without creating noise.
+  # Patch and minor updates grouped; major updates get individual PRs
+  # for deliberate review.
+  - package-ecosystem: "swift"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    assignees:
+      - "dinesh-git17"
+    labels:
+      - "type: chore"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      swift-minor-patch:
+        update-types:
+          - "patch"
+          - "minor"
+    open-pull-requests-limit: 5
+
+  # -- pre-commit hooks (.pre-commit-config.yaml) -----------------------
+  # Already present. Tracks rev pins for pre-commit-hooks, conventional-pre-commit.
+  # Monthly is appropriate -- hook versions are stable and low-risk.
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "dinesh-git17"
+    labels:
+      - "type: chore"
+      - "area: governance"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      pre-commit-hooks:
+        patterns:
+          - "*"
+    open-pull-requests-limit: 3
+
+  # -- Bundler / Fastlane (Gemfile) -------------------------------------
+  # Phase 13 adds Fastlane for TestFlight distribution.
+  # Monthly cadence; Fastlane releases are infrequent and low-urgency.
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "dinesh-git17"
+    labels:
+      - "type: chore"
+      - "area: ci"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      fastlane:
+        patterns:
+          - "fastlane"
+          - "fastlane-*"
+      bundler-minor-patch:
+        update-types:
+          - "patch"
+          - "minor"
+    open-pull-requests-limit: 3

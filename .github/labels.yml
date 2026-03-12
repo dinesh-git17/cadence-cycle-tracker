@@ -1,0 +1,99 @@
+# labels.yml -- Cadence Cycle Tracker
+#
+# Declarative label set. Sync via github-labeler action or github-label-sync CLI.
+# Unlisted default labels will be removed on sync.
+#
+# Taxonomy: type, priority, area, status.
+# Phases tracked via GitHub Milestones, not labels.
+
+# ── Type (aligned with Conventional Commits) ──────────────────────────────────
+
+- name: "type: feat"
+  description: "New functionality"
+  color: "0052CC"
+
+- name: "type: fix"
+  description: "Bug fix"
+  color: "D73A4A"
+
+- name: "type: chore"
+  description: "Config, tooling, build, dependencies"
+  color: "6E7781"
+
+- name: "type: refactor"
+  description: "Restructuring without behavior change"
+  color: "5319E7"
+
+- name: "type: docs"
+  description: "Documentation changes"
+  color: "0075CA"
+
+- name: "type: test"
+  description: "Test additions or modifications"
+  color: "BFD4F2"
+
+- name: "type: exp"
+  description: "Experimental or exploratory work"
+  color: "D4C5F9"
+
+# ── Priority ──────────────────────────────────────────────────────────────────
+
+- name: "priority: critical"
+  description: "Blocks release or causes data loss"
+  color: "B60205"
+
+- name: "priority: high"
+  description: "Must resolve before current phase completes"
+  color: "FF6F00"
+
+- name: "priority: normal"
+  description: "Standard priority -- address in normal flow"
+  color: "FBCA04"
+
+# ── Area (mapped to skill domains) ────────────────────────────────────────────
+
+- name: "area: ui"
+  description: "SwiftUI views, design system, motion, accessibility"
+  color: "C2E0C6"
+
+- name: "area: data"
+  description: "SwiftData schema, prediction engine, local persistence"
+  color: "D4C5F9"
+
+- name: "area: sync"
+  description: "SyncCoordinator, write queue, conflict resolution"
+  color: "BFDADC"
+
+- name: "area: supabase"
+  description: "Auth, RLS, Edge Functions, Realtime, migrations"
+  color: "3ECF8E"
+
+- name: "area: navigation"
+  description: "Tab structure, routing, deep links, sheet presentation"
+  color: "FEF2C0"
+
+- name: "area: privacy"
+  description: "isPrivate override, share flags, partner data boundaries"
+  color: "F9D0C4"
+
+- name: "area: ci"
+  description: "GitHub Actions, Fastlane, pipeline gates"
+  color: "E4E669"
+
+- name: "area: governance"
+  description: "CLAUDE.md, hooks, skills, scripts, CODEOWNERS"
+  color: "EDEDED"
+
+# ── Status ────────────────────────────────────────────────────────────────────
+
+- name: "status: blocked"
+  description: "Cannot proceed -- dependency or decision needed"
+  color: "B60205"
+
+- name: "status: needs-design"
+  description: "Requires spec clarification or designer input"
+  color: "D93F0B"
+
+- name: "status: ready"
+  description: "Defined and ready for implementation"
+  color: "0E8A16"

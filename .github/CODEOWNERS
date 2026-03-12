@@ -1,0 +1,40 @@
+# CODEOWNERS -- Cadence Cycle Tracker
+
+#
+
+# Last-match-wins. General rules first, specific overrides below.
+
+# Ref: https://docs.github.com/articles/about-code-owners
+
+# Default: all files require owner review
+
+- @dinesh-git17
+
+# Governance and agent infrastructure
+
+CLAUDE.md @dinesh-git17
+.claude/ @dinesh-git17
+.github/ @dinesh-git17
+
+# Design system and locked specs (v1.1 is frozen -- changes require explicit approval)
+
+docs/CADENCE_DESIGN_DOCS/ @dinesh-git17
+
+# Phase planning and epic definitions
+
+docs/PHASES.md @dinesh-git17
+docs/PH-\*/ @dinesh-git17
+
+# Enforcement scripts and hook infrastructure
+
+scripts/ @dinesh-git17
+.pre-commit-config.yaml @dinesh-git17
+
+# Build and project structure
+
+project.yml @dinesh-git17
+
+# CI/CD pipeline
+
+.github/workflows/ @dinesh-git17
+fastlane/ @dinesh-git17
