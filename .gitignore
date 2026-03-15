@@ -22,6 +22,7 @@ Pods/
 # --- Secrets and credentials ---
 .env
 .env.*
+!.env.*.example
 *.p8
 *.p12
 *.mobileprovision
