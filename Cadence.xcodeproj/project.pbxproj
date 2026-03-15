@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09170BFB0C94F43AD36765E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A651D9F51AC0F117E11821 /* ContentView.swift */; };
 		28E458EF554469DF6A804BC5 /* CadenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9880DDA2B852F0ED7E7ECC0F /* CadenceTests.swift */; };
+		296BC94E9904C1C5A2346887 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FF48DA0EA8EF6D23F75B09 /* Colors.xcassets */; };
 		3BC6EA980CDF4737E11A8B60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63113CD2E72104D581DA8D55 /* Images.xcassets */; };
 		43A6653D967FC59ABC91624E /* CadenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2468FAE7A89F2B18DEDAF /* CadenceApp.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		53DC5566E2688823A894040D /* CadenceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CadenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63113CD2E72104D581DA8D55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E22506E21A74E4D5AAE8789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		79FF48DA0EA8EF6D23F75B09 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		97195BFC6DEF54B1164DBC51 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		9880DDA2B852F0ED7E7ECC0F /* CadenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadenceTests.swift; sourceTree = "<group>"; };
 		98A651D9F51AC0F117E11821 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		B503AFF52A56DB4D78ECDCD4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79FF48DA0EA8EF6D23F75B09 /* Colors.xcassets */,
 				63113CD2E72104D581DA8D55 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296BC94E9904C1C5A2346887 /* Colors.xcassets in Resources */,
 				3BC6EA980CDF4737E11A8B60 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
