@@ -1,0 +1,18 @@
+default_platform(:ios)
+
+platform :ios do
+  lane :lint do
+    sh("cd .. && swiftlint lint --strict --reporter github-actions-logging")
+  end
+
+  lane :build do
+    sh(
+      "cd .. && set -o pipefail && xcodebuild " \
+      "-scheme Cadence " \
+      "-destination 'platform=iOS Simulator,name=iPhone 16 Pro' " \
+      "SWIFT_TREAT_WARNINGS_AS_ERRORS=YES " \
+      "build " \
+      "| xcbeautify --renderer github-actions"
+    )
+  end
+end
