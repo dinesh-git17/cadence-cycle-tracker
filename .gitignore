@@ -2,11 +2,14 @@
 DerivedData/
 build/
 xcuserdata/
+*.xcuserstate
 *.xcworkspace/
 !Cadence.xcodeproj/
 *.moved-aside
 *.hmap
 *.ipa
+*.dSYM.zip
+*.dSYM
 
 # --- Swift Package Manager ---
 .swiftpm/
@@ -42,6 +45,10 @@ Pods/
 .idea/
 *.swp
 *~
+
+# --- Ruby / Bundler ---
+vendor/bundle
+.bundle/
 
 # --- Fastlane ---
 fastlane/report.xml
