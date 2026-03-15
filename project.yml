@@ -8,6 +8,13 @@ settings:
   base:
     SWIFT_VERSION: "5.0"
     IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+packages:
+  Supabase:
+    url: https://github.com/supabase/supabase-swift.git
+    exactVersion: "2.26.0"
+configFiles:
+  Debug: Config.xcconfig
+  Release: Config.xcconfig
 targets:
   Cadence:
     type: application
@@ -23,6 +30,19 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.cadence.tracker
         INFOPLIST_FILE: Cadence/App/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_TREAT_WARNINGS_AS_ERRORS: "YES"
+    dependencies:
+      - package: Supabase
+        product: Auth
+      - package: Supabase
+        product: PostgREST
+      - package: Supabase
+        product: Supabase
+    entitlements:
+      path: Cadence/Cadence.entitlements
+      properties:
+        com.apple.developer.applesignin:
+          - Default
   CadenceTests:
     type: bundle.unit-test
     platform: iOS

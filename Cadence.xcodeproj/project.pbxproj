@@ -8,10 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		09170BFB0C94F43AD36765E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A651D9F51AC0F117E11821 /* ContentView.swift */; };
+		1EC0848820700094854A40CA /* CadenceMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FEEA2F4C8776E2E054124B /* CadenceMark.swift */; };
+		21F05D7B25EBF909A96DA066 /* PartnerOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A675D0C398D59137A30FB31B /* PartnerOnboardingViewModel.swift */; };
+		26F8BA2FB093B4B290B18C84 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0DBE26257097A535BED8C /* SplashView.swift */; };
 		28E458EF554469DF6A804BC5 /* CadenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9880DDA2B852F0ED7E7ECC0F /* CadenceTests.swift */; };
 		296BC94E9904C1C5A2346887 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FF48DA0EA8EF6D23F75B09 /* Colors.xcassets */; };
 		3BC6EA980CDF4737E11A8B60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63113CD2E72104D581DA8D55 /* Images.xcassets */; };
+		3C1EA66A03717EE61BD686B8 /* GoalMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708819386BC4C6E3A5EE4262 /* GoalMode.swift */; };
 		43A6653D967FC59ABC91624E /* CadenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2468FAE7A89F2B18DEDAF /* CadenceApp.swift */; };
+		44F0D10AB374E2B606C25B5C /* TrackerOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113437B5C437D8D18B7115F /* TrackerOnboardingViewModel.swift */; };
+		4965A6CBD0319CFCC0472440 /* CycleProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE847CD5F4C632F4AD6160 /* CycleProfile.swift */; };
+		4A53984598F2569C54A8D9FE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4D4C85F3A12F1301021B39 /* AuthViewModel.swift */; };
+		55CCEB3E7931A4F17935F67E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 47DC5B319847E2250B78234F /* Supabase */; };
+		58FC6C8F07F1F8BBA3906F7C /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC64FEB43FB7AF3D37E5C3C /* AuthState.swift */; };
+		6BD0490D4DC27DEFF71E7D49 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653C91F79DEDD4DE467C030 /* AuthView.swift */; };
+		83EF2F1E14E42BB127A9F2B0 /* PartnerOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3B0BD32C7FF09ACCBE4CB /* PartnerOnboardingView.swift */; };
+		9B899BABE24F92495137A3A5 /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D362617F14A847D5DEB63 /* SupabaseClient.swift */; };
+		A0B10965E26138F42C677BE1 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = F7497ACCCC8D095E03A7BDD0 /* PostgREST */; };
+		A61B7DC8BB1C75AC80E463D6 /* TrackerShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF787681F96B64443A61E0 /* TrackerShellView.swift */; };
+		B5FD7C46A1BD4A61213EBEA2 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79738D6C8F11A583BC3B11E8 /* UserRole.swift */; };
+		C61E09A77534559C2A0568BE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA1DB9F872248B640EF357 /* AppCoordinator.swift */; };
+		CA7DEBC92273F86FC09DB926 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 33132498B155D4D5EB5CFAA3 /* Auth */; };
+		CB5A3B51DD207A4F57D940D8 /* PartnerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E42F08F89B0A01AE78BEC /* PartnerConnection.swift */; };
+		D5B79B44F224276977CB7261 /* PartnerShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DED2179EDAC974EE5C79F /* PartnerShellView.swift */; };
+		E4825D686BAD58A246442C0A /* TrackerOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD033EE0272A26635AC462 /* TrackerOnboardingView.swift */; };
+		E4B1B69F67B534B9460298B4 /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030DD8CD5DFFA34300DEE01 /* RoleSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,37 +46,73 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FE35759FB506FF317E2E383 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
-		2417A7F1C583C92FD381CACC /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		08B3B0BD32C7FF09ACCBE4CB /* PartnerOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerOnboardingView.swift; sourceTree = "<group>"; };
+		2653C91F79DEDD4DE467C030 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		2747B5C0BD75EFECA1D2569B /* Cadence.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cadence.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F952BE8D509B7A77A26434D /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
-		3F77C02A7BB521CCF0487CF8 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		2D05198AB1A24815EC49E523 /* Cadence.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cadence.entitlements; sourceTree = "<group>"; };
+		39FEEA2F4C8776E2E054124B /* CadenceMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadenceMark.swift; sourceTree = "<group>"; };
+		3F5DED2179EDAC974EE5C79F /* PartnerShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerShellView.swift; sourceTree = "<group>"; };
+		5030DD8CD5DFFA34300DEE01 /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
 		53DC5566E2688823A894040D /* CadenceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CadenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63113CD2E72104D581DA8D55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E22506E21A74E4D5AAE8789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		708819386BC4C6E3A5EE4262 /* GoalMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalMode.swift; sourceTree = "<group>"; };
+		7113437B5C437D8D18B7115F /* TrackerOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerOnboardingViewModel.swift; sourceTree = "<group>"; };
+		79738D6C8F11A583BC3B11E8 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 		79FF48DA0EA8EF6D23F75B09 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		970E42F08F89B0A01AE78BEC /* PartnerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerConnection.swift; sourceTree = "<group>"; };
 		97195BFC6DEF54B1164DBC51 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		9880DDA2B852F0ED7E7ECC0F /* CadenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadenceTests.swift; sourceTree = "<group>"; };
 		98A651D9F51AC0F117E11821 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A9219A514600EB8FDD9F4835 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
-		C19B87F24BABDAAD5792BABD /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		9EC64FEB43FB7AF3D37E5C3C /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		A5CD033EE0272A26635AC462 /* TrackerOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerOnboardingView.swift; sourceTree = "<group>"; };
+		A675D0C398D59137A30FB31B /* PartnerOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerOnboardingViewModel.swift; sourceTree = "<group>"; };
+		A6CE847CD5F4C632F4AD6160 /* CycleProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleProfile.swift; sourceTree = "<group>"; };
+		B1B0DBE26257097A535BED8C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		BC4D4C85F3A12F1301021B39 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C4CF787681F96B64443A61E0 /* TrackerShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerShellView.swift; sourceTree = "<group>"; };
+		C6AA1DB9F872248B640EF357 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CCD2468FAE7A89F2B18DEDAF /* CadenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadenceApp.swift; sourceTree = "<group>"; };
-		D3D5963BEE9A7A2D4E6C4FF1 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		F10D362617F14A847D5DEB63 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
+		"TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56B76F527BA1B0C195D380DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7DEBC92273F86FC09DB926 /* Auth in Frameworks */,
+				A0B10965E26138F42C677BE1 /* PostgREST in Frameworks */,
+				55CCEB3E7931A4F17935F67E /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		15BC965AFB84950FD192C71A /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				2417A7F1C583C92FD381CACC /* .gitkeep */,
+				C4CF787681F96B64443A61E0 /* TrackerShellView.swift */,
 			);
 			path = Tracker;
+			sourceTree = "<group>";
+		};
+		16F8F39E59EF5FB3F7AD4728 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				08B3B0BD32C7FF09ACCBE4CB /* PartnerOnboardingView.swift */,
+				5030DD8CD5DFFA34300DEE01 /* RoleSelectionView.swift */,
+				A5CD033EE0272A26635AC462 /* TrackerOnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		308CDB24E95D245B30DF0647 /* Partner */ = {
 			isa = PBXGroup;
 			children = (
-				C19B87F24BABDAAD5792BABD /* .gitkeep */,
+				3F5DED2179EDAC974EE5C79F /* PartnerShellView.swift */,
 			);
 			path = Partner;
 			sourceTree = "<group>";
@@ -63,7 +120,7 @@
 		322048FC10BADD435D2924DA /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				3F77C02A7BB521CCF0487CF8 /* .gitkeep */,
+				2653C91F79DEDD4DE467C030 /* AuthView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -87,7 +144,9 @@
 		4E6D004C3537C09E1BB0EA26 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0FE35759FB506FF317E2E383 /* .gitkeep */,
+				BC4D4C85F3A12F1301021B39 /* AuthViewModel.swift */,
+				A675D0C398D59137A30FB31B /* PartnerOnboardingViewModel.swift */,
+				7113437B5C437D8D18B7115F /* TrackerOnboardingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -95,7 +154,10 @@
 		5875D9DE20878243E04EB85B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2F952BE8D509B7A77A26434D /* .gitkeep */,
+				A6CE847CD5F4C632F4AD6160 /* CycleProfile.swift */,
+				708819386BC4C6E3A5EE4262 /* GoalMode.swift */,
+				970E42F08F89B0A01AE78BEC /* PartnerConnection.swift */,
+				79738D6C8F11A583BC3B11E8 /* UserRole.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,8 +182,10 @@
 		78D2D1E4520BA69AC30BB1CB /* App */ = {
 			isa = PBXGroup;
 			children = (
+				C6AA1DB9F872248B640EF357 /* AppCoordinator.swift */,
 				CCD2468FAE7A89F2B18DEDAF /* CadenceApp.swift */,
 				6E22506E21A74E4D5AAE8789 /* Info.plist */,
+				F10D362617F14A847D5DEB63 /* SupabaseClient.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -129,7 +193,8 @@
 		A38379F751870EF50FEC2395 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				A9219A514600EB8FDD9F4835 /* .gitkeep */,
+				39FEEA2F4C8776E2E054124B /* CadenceMark.swift */,
+				B1B0DBE26257097A535BED8C /* SplashView.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -157,6 +222,7 @@
 			children = (
 				322048FC10BADD435D2924DA /* Auth */,
 				6E9797E9120D1BEC65111F46 /* Log */,
+				16F8F39E59EF5FB3F7AD4728 /* Onboarding */,
 				308CDB24E95D245B30DF0647 /* Partner */,
 				47D5384883509E40880200C7 /* Shared */,
 				A38379F751870EF50FEC2395 /* Splash */,
@@ -168,7 +234,7 @@
 		C44473C867EA22AD5CDA9820 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D3D5963BEE9A7A2D4E6C4FF1 /* .gitkeep */,
+				9EC64FEB43FB7AF3D37E5C3C /* AuthState.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,6 +242,7 @@
 		FD48710B608BE6A57DA448D7 /* Cadence */ = {
 			isa = PBXGroup;
 			children = (
+				2D05198AB1A24815EC49E523 /* Cadence.entitlements */,
 				78D2D1E4520BA69AC30BB1CB /* App */,
 				5875D9DE20878243E04EB85B /* Models */,
 				B503AFF52A56DB4D78ECDCD4 /* Resources */,
@@ -184,6 +251,14 @@
 				C37C0191DAE1A99930DB8D9A /* Views */,
 			);
 			path = Cadence;
+			sourceTree = "<group>";
+		};
+		"TEMP_1112308E-AE8D-472D-B7EC-32D0463A6A22" /* cadence-cycle-tracker */ = {
+			isa = PBXGroup;
+			children = (
+				"TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */,
+			);
+			path = "cadence-cycle-tracker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +270,7 @@
 			buildPhases = (
 				1F5350DE3B53E65CAAF89D1D /* Sources */,
 				BFA5A0EE784FE6F59E5E0293 /* Resources */,
+				56B76F527BA1B0C195D380DB /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +278,9 @@
 			);
 			name = Cadence;
 			packageProductDependencies = (
+				33132498B155D4D5EB5CFAA3 /* Auth */,
+				F7497ACCCC8D095E03A7BDD0 /* PostgREST */,
+				47DC5B319847E2250B78234F /* Supabase */,
 			);
 			productName = Cadence;
 			productReference = 2747B5C0BD75EFECA1D2569B /* Cadence.app */;
@@ -245,6 +324,9 @@
 			);
 			mainGroup = 6A9F1C3B6267176F20AE4B03;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8A00C7C9A946821A1D671FC2 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ADFE63F9A7B11522B6C8E81A /* Products */;
 			projectDirPath = "";
@@ -273,8 +355,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61E09A77534559C2A0568BE /* AppCoordinator.swift in Sources */,
+				58FC6C8F07F1F8BBA3906F7C /* AuthState.swift in Sources */,
+				6BD0490D4DC27DEFF71E7D49 /* AuthView.swift in Sources */,
+				4A53984598F2569C54A8D9FE /* AuthViewModel.swift in Sources */,
 				43A6653D967FC59ABC91624E /* CadenceApp.swift in Sources */,
+				1EC0848820700094854A40CA /* CadenceMark.swift in Sources */,
 				09170BFB0C94F43AD36765E7 /* ContentView.swift in Sources */,
+				4965A6CBD0319CFCC0472440 /* CycleProfile.swift in Sources */,
+				3C1EA66A03717EE61BD686B8 /* GoalMode.swift in Sources */,
+				CB5A3B51DD207A4F57D940D8 /* PartnerConnection.swift in Sources */,
+				83EF2F1E14E42BB127A9F2B0 /* PartnerOnboardingView.swift in Sources */,
+				21F05D7B25EBF909A96DA066 /* PartnerOnboardingViewModel.swift in Sources */,
+				D5B79B44F224276977CB7261 /* PartnerShellView.swift in Sources */,
+				E4B1B69F67B534B9460298B4 /* RoleSelectionView.swift in Sources */,
+				26F8BA2FB093B4B290B18C84 /* SplashView.swift in Sources */,
+				9B899BABE24F92495137A3A5 /* SupabaseClient.swift in Sources */,
+				E4825D686BAD58A246442C0A /* TrackerOnboardingView.swift in Sources */,
+				44F0D10AB374E2B606C25B5C /* TrackerOnboardingViewModel.swift in Sources */,
+				A61B7DC8BB1C75AC80E463D6 /* TrackerShellView.swift in Sources */,
+				B5FD7C46A1BD4A61213EBEA2 /* UserRole.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cadence/Cadence.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cadence/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -310,6 +411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cadence.tracker;
 				SDKROOT = iphoneos;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -318,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cadence/Cadence.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cadence/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -327,12 +430,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cadence.tracker;
 				SDKROOT = iphoneos;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		9DBE9E0079A7DB194A03BF0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = "TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -406,6 +511,7 @@
 		};
 		C78721ED836CA881972A504D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = "TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -515,6 +621,35 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A00C7C9A946821A1D671FC2 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33132498B155D4D5EB5CFAA3 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A00C7C9A946821A1D671FC2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		47DC5B319847E2250B78234F /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A00C7C9A946821A1D671FC2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		F7497ACCCC8D095E03A7BDD0 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A00C7C9A946821A1D671FC2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FA114BF81E88A4D01B65D31 /* Project object */;
 }
