@@ -78,8 +78,12 @@ for file in "$@"; do
 
     basename_file=$(basename "$file")
     if [[ "$basename_file" == ".env" || "$basename_file" == ".env."* ]]; then
-        VIOLATIONS+=("${file}|0|.env file staged for commit")
-        continue
+        if [[ "$basename_file" == *.example ]]; then
+            continue
+        else
+            VIOLATIONS+=("${file}|0|.env file staged for commit")
+            continue
+        fi
     fi
 
     for i in "${!SECRET_PATTERNS[@]}"; do
