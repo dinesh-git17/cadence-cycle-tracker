@@ -1,0 +1,7 @@
+included:
+  - Cadence
+
+excluded:
+  - Cadence.xcodeproj
+
+reporter: "github-actions-logging"
