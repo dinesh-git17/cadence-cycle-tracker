@@ -23,6 +23,7 @@ Pods/
 .env
 .env.*
 !.env.*.example
+Config.xcconfig
 *.p8
 *.p12
 *.mobileprovision

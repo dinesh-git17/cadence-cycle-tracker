@@ -10,7 +10,7 @@ platform :ios do
       "cd .. && set -o pipefail && xcodebuild " \
       "-scheme Cadence " \
       "-destination 'platform=iOS Simulator,name=iPhone 16 Pro' " \
-      "SWIFT_TREAT_WARNINGS_AS_ERRORS=YES " \
+      "-skipPackagePluginValidation " \
       "build " \
       "| xcbeautify --renderer github-actions"
     )

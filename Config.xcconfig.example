@@ -1,0 +1,11 @@
+// Cadence Supabase Configuration
+// Copy this file to Config.xcconfig and fill in your values.
+// Config.xcconfig is gitignored and must not be committed.
+//
+// Required keys:
+//   1. Your Supabase project URL
+//   2. Your Supabase anonymous/public key
+//
+// Both keys are configured as xcconfig build settings that are
+// injected into Info.plist at build time. See Info.plist for
+// the corresponding entries.
