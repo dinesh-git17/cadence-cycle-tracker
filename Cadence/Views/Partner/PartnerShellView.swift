@@ -18,7 +18,23 @@ struct PartnerShellView: View {
                 Text("Full shell arriving in Phase 9")
                     .font(.subheadline)
                     .foregroundStyle(Color("CadenceTextSecondary"))
+
+                signOutButton
             }
         }
+    }
+
+    private var signOutButton: some View {
+        Button {
+            Task {
+                try? await supabase.auth.signOut()
+            }
+        } label: {
+            Text("Sign out")
+                .font(.footnote)
+                .foregroundStyle(Color("CadenceTerracotta"))
+        }
+        .frame(minHeight: 44)
+        .padding(.top, 24)
     }
 }

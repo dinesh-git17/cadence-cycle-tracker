@@ -1,5 +1,14 @@
 import SwiftUI
 
+private struct RoleCardConfig {
+    let icon: String
+    let iconColor: Color
+    let iconBackground: Color
+    let title: String
+    let description: String
+    let role: UserRole
+}
+
 struct RoleSelectionView: View {
     var onRoleSelected: (UserRole) -> Void
 
@@ -7,34 +16,48 @@ struct RoleSelectionView: View {
     @State private var selectedRole: UserRole?
     @State private var errorMessage: String?
 
-    private let ctaHeight: CGFloat = 50
-    private let ctaCornerRadius: CGFloat = 14
+    private let cardCornerRadius: CGFloat = 16
+    private let iconBackgroundSize: CGFloat = 56
+    private let iconCornerRadius: CGFloat = 14
     private let screenMargin: CGFloat = 16
-    private let sectionSpacing: CGFloat = 24
+    private let cardPadding: CGFloat = 20
+    private let sectionSpacing: CGFloat = 16
 
     var body: some View {
         ZStack {
             Color("CadenceBackground")
                 .ignoresSafeArea()
 
-            VStack(spacing: sectionSpacing) {
-                Spacer()
-
-                Text("How will you use Cadence?")
-                    .font(.title2)
+            VStack(alignment: .leading, spacing: sectionSpacing) {
+                Text("How will you\nuse Cadence?")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                     .foregroundStyle(Color("CadenceTextPrimary"))
-                    .multilineTextAlignment(.center)
 
-                VStack(spacing: 12) {
-                    roleButton(
-                        title: "I track my cycle",
-                        role: .tracker
-                    )
-                    roleButton(
-                        title: "My partner tracks their cycle",
-                        role: .partner
-                    )
-                }
+                Text("This can't be changed later.")
+                    .font(.subheadline)
+                    .foregroundStyle(Color("CadenceTextSecondary"))
+
+                Spacer()
+                    .frame(height: 8)
+
+                roleCard(.init(
+                    icon: "circle.fill",
+                    iconColor: Color("CadenceTerracotta"),
+                    iconBackground: Color("CadenceTerracotta").opacity(0.15),
+                    title: "I track my cycle",
+                    description: "Log your period, symptoms, and cycle data. Control what you share with a partner.",
+                    role: .tracker
+                ))
+
+                roleCard(.init(
+                    icon: "heart.fill",
+                    iconColor: Color("CadenceSage"),
+                    iconBackground: Color("CadenceSageLight"),
+                    title: "My partner tracks their cycle",
+                    description: "See what your partner shares with you. Read-only access to their cycle data.",
+                    role: .partner
+                ))
 
                 if let errorMessage {
                     HStack(spacing: 4) {
@@ -48,48 +71,50 @@ struct RoleSelectionView: View {
                 Spacer()
             }
             .padding(.horizontal, screenMargin)
+            .padding(.top, 60)
         }
     }
 
-    private func roleButton(title: String, role: UserRole) -> some View {
+    private func roleCard(_ config: RoleCardConfig) -> some View {
         Button {
-            Task { await selectRole(role) }
+            Task { await selectRole(config.role) }
         } label: {
-            ZStack {
-                if isLoading && selectedRole == role {
-                    ProgressView()
-                        .tint(Color("CadenceTextOnAccent"))
-                } else {
-                    Text(title)
-                        .font(.headline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(
-                            selectedRole == role
-                                ? Color("CadenceTextOnAccent")
-                                : Color("CadenceTextPrimary")
-                        )
+            VStack(spacing: 12) {
+                ZStack {
+                    if isLoading && selectedRole == config.role {
+                        ProgressView()
+                            .tint(Color("CadenceTextPrimary"))
+                    } else {
+                        RoundedRectangle(cornerRadius: iconCornerRadius)
+                            .fill(config.iconBackground)
+                            .frame(width: iconBackgroundSize, height: iconBackgroundSize)
+                            .overlay(
+                                Image(systemName: config.icon)
+                                    .font(.title3)
+                                    .foregroundStyle(config.iconColor)
+                            )
+                    }
                 }
+
+                Text(config.title)
+                    .font(.headline)
+                    .foregroundStyle(Color("CadenceTextPrimary"))
+
+                Text(config.description)
+                    .font(.subheadline)
+                    .foregroundStyle(Color("CadenceTextSecondary"))
+                    .multilineTextAlignment(.center)
             }
+            .padding(cardPadding)
             .frame(maxWidth: .infinity)
-            .frame(height: ctaHeight)
-            .background(
-                selectedRole == role
-                    ? Color("CadenceTerracotta")
-                    : Color("CadenceCard")
-            )
-            .clipShape(RoundedRectangle(cornerRadius: ctaCornerRadius))
+            .background(Color("CadenceCard"))
+            .clipShape(RoundedRectangle(cornerRadius: cardCornerRadius))
             .overlay(
-                RoundedRectangle(cornerRadius: ctaCornerRadius)
-                    .stroke(
-                        selectedRole == role
-                            ? Color.clear
-                            : Color("CadenceBorder"),
-                        lineWidth: 1
-                    )
+                RoundedRectangle(cornerRadius: cardCornerRadius)
+                    .stroke(Color("CadenceBorder"), lineWidth: 1)
             )
         }
         .disabled(isLoading)
-        .frame(minHeight: 44)
     }
 
     private func selectRole(_ role: UserRole) async {

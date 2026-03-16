@@ -14,6 +14,7 @@ struct CadenceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light)
                 .environment(coordinator)
                 .task {
                     await coordinator.resolveInitialRoute()

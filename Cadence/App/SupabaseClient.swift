@@ -23,5 +23,10 @@ enum SupabaseConfig {
 
 let supabase = SupabaseClient(
     supabaseURL: SupabaseConfig.url,
-    supabaseKey: SupabaseConfig.anonKey
+    supabaseKey: SupabaseConfig.anonKey,
+    options: .init(
+        auth: .init(
+            redirectToURL: URL(string: "cadence://auth-callback")
+        )
+    )
 )

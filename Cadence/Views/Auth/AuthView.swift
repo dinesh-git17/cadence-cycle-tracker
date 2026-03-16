@@ -17,20 +17,18 @@ struct AuthView: View {
             Color("CadenceBackground")
                 .ignoresSafeArea()
 
-            ScrollView {
-                VStack(spacing: sectionSpacing) {
-                    headerSection
-                    socialAuthSection
-                    dividerSection
-                    emailPasswordSection
-                    forgotPasswordSection
-                    continueSection
-                    modeToggleSection
-                }
-                .padding(.horizontal, screenMargin)
-                .padding(.top, 60)
-                .padding(.bottom, 40)
+            VStack(spacing: sectionSpacing) {
+                Spacer()
+                headerSection
+                socialAuthSection
+                dividerSection
+                emailPasswordSection
+                forgotPasswordSection
+                continueSection
+                modeToggleSection
+                Spacer()
             }
+            .padding(.horizontal, screenMargin)
         }
     }
 
@@ -65,18 +63,22 @@ struct AuthView: View {
             Button {
                 Task { await viewModel.signInWithGoogle() }
             } label: {
-                Text("Sign in with Google")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(Color("CadenceTextPrimary"))
-                    .frame(maxWidth: .infinity)
-                    .frame(height: ctaHeight)
-                    .background(Color("CadenceCard"))
-                    .clipShape(RoundedRectangle(cornerRadius: ctaCornerRadius))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: ctaCornerRadius)
-                            .stroke(Color("CadenceBorder"), lineWidth: 1)
-                    )
+                HStack(spacing: 8) {
+                    GoogleLogo()
+                        .frame(width: 18, height: 18)
+                    Text("Sign in with Google")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color("CadenceTextPrimary"))
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: ctaHeight)
+                .background(Color("CadenceCard"))
+                .clipShape(RoundedRectangle(cornerRadius: ctaCornerRadius))
+                .overlay(
+                    RoundedRectangle(cornerRadius: ctaCornerRadius)
+                        .stroke(Color("CadenceBorder"), lineWidth: 1)
+                )
             }
             .frame(minHeight: 44)
         }
