@@ -28,6 +28,7 @@
 		A61B7DC8BB1C75AC80E463D6 /* TrackerShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF787681F96B64443A61E0 /* TrackerShellView.swift */; };
 		B5FD7C46A1BD4A61213EBEA2 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79738D6C8F11A583BC3B11E8 /* UserRole.swift */; };
 		C61E09A77534559C2A0568BE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA1DB9F872248B640EF357 /* AppCoordinator.swift */; };
+		C6478B97C539CC819A8D0F94 /* GoogleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21359D4D16B6E5E1C70EB4E3 /* GoogleLogo.swift */; };
 		CA7DEBC92273F86FC09DB926 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 33132498B155D4D5EB5CFAA3 /* Auth */; };
 		CB5A3B51DD207A4F57D940D8 /* PartnerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E42F08F89B0A01AE78BEC /* PartnerConnection.swift */; };
 		D5B79B44F224276977CB7261 /* PartnerShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DED2179EDAC974EE5C79F /* PartnerShellView.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		08B3B0BD32C7FF09ACCBE4CB /* PartnerOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerOnboardingView.swift; sourceTree = "<group>"; };
+		21359D4D16B6E5E1C70EB4E3 /* GoogleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogo.swift; sourceTree = "<group>"; };
 		2653C91F79DEDD4DE467C030 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		2747B5C0BD75EFECA1D2569B /* Cadence.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cadence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D05198AB1A24815EC49E523 /* Cadence.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cadence.entitlements; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		C6AA1DB9F872248B640EF357 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CCD2468FAE7A89F2B18DEDAF /* CadenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadenceApp.swift; sourceTree = "<group>"; };
 		F10D362617F14A847D5DEB63 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
-		"TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		"TEMP_39A43C38-269E-4C44-A30E-4309262A954B" /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				98A651D9F51AC0F117E11821 /* ContentView.swift */,
+				21359D4D16B6E5E1C70EB4E3 /* GoogleLogo.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -253,10 +256,10 @@
 			path = Cadence;
 			sourceTree = "<group>";
 		};
-		"TEMP_1112308E-AE8D-472D-B7EC-32D0463A6A22" /* cadence-cycle-tracker */ = {
+		"TEMP_C01C6CC1-EC8C-4580-94C2-828F82AEE480" /* cadence-cycle-tracker */ = {
 			isa = PBXGroup;
 			children = (
-				"TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */,
+				"TEMP_39A43C38-269E-4C44-A30E-4309262A954B" /* Config.xcconfig */,
 			);
 			path = "cadence-cycle-tracker";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				09170BFB0C94F43AD36765E7 /* ContentView.swift in Sources */,
 				4965A6CBD0319CFCC0472440 /* CycleProfile.swift in Sources */,
 				3C1EA66A03717EE61BD686B8 /* GoalMode.swift in Sources */,
+				C6478B97C539CC819A8D0F94 /* GoogleLogo.swift in Sources */,
 				CB5A3B51DD207A4F57D940D8 /* PartnerConnection.swift in Sources */,
 				83EF2F1E14E42BB127A9F2B0 /* PartnerOnboardingView.swift in Sources */,
 				21F05D7B25EBF909A96DA066 /* PartnerOnboardingViewModel.swift in Sources */,
@@ -437,7 +441,7 @@
 		};
 		9DBE9E0079A7DB194A03BF0C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = "TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */;
+			baseConfigurationReference = "TEMP_39A43C38-269E-4C44-A30E-4309262A954B" /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -511,7 +515,7 @@
 		};
 		C78721ED836CA881972A504D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = "TEMP_9BB4A99A-8C48-4769-8A97-9353F2BFD9A2" /* Config.xcconfig */;
+			baseConfigurationReference = "TEMP_39A43C38-269E-4C44-A30E-4309262A954B" /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
