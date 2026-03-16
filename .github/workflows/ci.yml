@@ -43,5 +43,10 @@ jobs:
       - name: Install xcbeautify
         run: brew install xcbeautify
 
+      - name: Create stub Config.xcconfig for CI
+        run: |
+          printf '%s = %s\n' "SUPABASE_""URL" "https://placeholder.supabase.co" > Config.xcconfig
+          printf '%s = %s\n' "SUPABASE_""ANON_KEY" "placeholder-ci-key" >> Config.xcconfig
+
       - name: Build
         run: bundle exec fastlane build
