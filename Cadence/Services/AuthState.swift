@@ -10,20 +10,10 @@ final class AuthState {
         currentSession != nil
     }
 
-    private var listenerTask: Task<Void, Never>?
+    init() {}
 
-    init() {
-        startListening()
-    }
-
-    nonisolated deinit {
-        MainActor.assumeIsolated {
-            listenerTask?.cancel()
-        }
-    }
-
-    private func startListening() {
-        listenerTask = Task {
+    func startListening() {
+        Task {
             for await (event, session) in supabase.auth.authStateChanges {
                 guard !Task.isCancelled else { return }
                 switch event {

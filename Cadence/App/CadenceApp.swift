@@ -17,6 +17,7 @@ struct CadenceApp: App {
                 .preferredColorScheme(.light)
                 .environment(coordinator)
                 .task {
+                    authState.startListening()
                     await coordinator.resolveInitialRoute()
                     observeAuthChanges()
                 }
